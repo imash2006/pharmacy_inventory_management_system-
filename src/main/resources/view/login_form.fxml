@@ -13,14 +13,13 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+<AnchorPane maxHeight="500.0" maxWidth="700.0" minHeight="500.0" minWidth="700.0" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
    <children>
       <StackPane opacity="0.82" style="-fx-background-image: url(&quot;yourImage.png&quot;);; -fx-background-size: cover;; -fx-background-position: center center;;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../javafx_final_courswork/src/main/resources/img/j.jpeg" />
+                  <Image url="@../img/j.jpeg" />
                </image>
             </ImageView>
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="500.0" opacity="0.54" stroke="BLACK" strokeType="INSIDE" width="700.0" />
