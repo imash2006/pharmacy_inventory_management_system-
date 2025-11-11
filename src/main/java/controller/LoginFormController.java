@@ -19,7 +19,15 @@ public class LoginFormController {
 
     @FXML
     void btnloginOnAction(ActionEvent event) {
+        String username = "admin";
+        String passworde = "1234";
+        String input1 = txtusername.getText();
+        String onput2 = txtpassword.getText();
+        if (input1 == username){
 
+        }else {
+
+        }
     }
 
 }
