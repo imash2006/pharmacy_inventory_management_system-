@@ -2,9 +2,13 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+
+import java.io.IOException;
 
 public class LoginFormController {
 
@@ -19,15 +23,12 @@ public class LoginFormController {
 
     @FXML
     void btnloginOnAction(ActionEvent event) {
-        String username = "admin";
-        String passworde = "1234";
-        String input1 = txtusername.getText();
-        String onput2 = txtpassword.getText();
-        if (input1 == username){
-
-        }else {
-
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/login_form.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
+        stage.show();
     }
 
 }
