@@ -20,7 +20,7 @@
          <children>
             <ImageView fitHeight="54.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/Screenshot%20(137).png" />
+                  <Image url="@../img/Screenshot (137).png" />
                </image>
                <HBox.margin>
                   <Insets left="10.0" top="10.0" />
@@ -28,7 +28,7 @@
             </ImageView>
             <ImageView fitHeight="172.0" fitWidth="338.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/Screenshot%20(138).png" />
+                  <Image url="@../img/Screenshot (138).png" />
                </image>
                <HBox.margin>
                   <Insets left="30.0" top="10.0" />
