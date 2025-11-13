@@ -98,12 +98,12 @@
                                 <RowConstraints maxHeight="392.80000000000007" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: #5eb4ff;" text="     Dashboard" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="     Dashboard" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                     <font>
                                         <Font name="System Bold" size="15.0" />
                                     </font>
                                 </Button>
-                                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="     Medicines" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: #5eb4ff;" text="     Medicines" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                     <font>
                                         <Font name="System Bold" size="15.0" />
                                     </font>
@@ -123,22 +123,25 @@
                                         <Font name="System Bold" size="15.0" />
                                     </font>
                                 </Button>
-                                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="Orders" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="      Orders" GridPane.columnIndex="1" GridPane.rowIndex="11">
                                     <font>
                                         <Font name="System Bold" size="15.0" />
                                     </font>
                                 </Button>
                                 <ImageView fitHeight="29.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                     <image>
-                                        <Image url="@../img/bg3.png" />
+                                        <Image url="@../img/v.png" />
                                     </image>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
                                 </ImageView>
-                                <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                <ImageView fitHeight="38.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                     <image>
-                                        <Image url="@../img/bg9.png" />
+                                        <Image url="@../img/11593963.png" />
                                     </image>
                                     <GridPane.margin>
-                                        <Insets left="8.0" />
+                                        <Insets left="11.0" />
                                     </GridPane.margin>
                                 </ImageView>
                                 <ImageView fitHeight="49.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
