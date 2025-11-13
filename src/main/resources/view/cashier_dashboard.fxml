@@ -1,14 +1,358 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.CashierDashboard"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane maxHeight="540.0" maxWidth="960.0" minHeight="540.0" minWidth="960.0" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CashierDashboard">
+    <children>
+        <HBox prefHeight="79.0" prefWidth="960.0" style="-fx-background-color: white; -fx-border-color: #cccccc;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <ImageView fitHeight="54.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/Screenshot (137).png" />
+                    </image>
+                    <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                    </HBox.margin>
+                </ImageView>
+                <ImageView fitHeight="64.0" fitWidth="446.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/Screenshot (143).png" />
+                    </image>
+                    <HBox.margin>
+                        <Insets left="30.0" top="10.0" />
+                    </HBox.margin>
+                </ImageView>
+                <BorderPane HBox.hgrow="ALWAYS">
+                    <right>
+                        <ImageView fitHeight="53.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_LEFT">
+                            <image>
+                                <Image url="@../img/857765.png" />
+                            </image>
+                            <BorderPane.margin>
+                                <Insets right="17.0" top="19.0" />
+                            </BorderPane.margin>
+                        </ImageView>
+                    </right>
+                    <center>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <right>
+                                <VBox prefHeight="83.0" prefWidth="202.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <Label text="14:30 PM">
+                                            <font>
+                                                <Font name="Arial Black" size="35.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Jan 21,2026">
+                                            <font>
+                                                <Font name="Arial Black" size="20.0" />
+                                            </font>
+                                            <opaqueInsets>
+                                                <Insets />
+                                            </opaqueInsets>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                            </right>
+                        </BorderPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </HBox>
+        <VBox prefHeight="540.0" prefWidth="206.0" style="-fx-background-color: white; -fx-border-color: #cccccc;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="84.0">
+            <children>
+                <BorderPane prefHeight="487.0" prefWidth="206.0">
+                    <center>
+                        <GridPane style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.399993896484375" minWidth="10.0" prefWidth="22.99999580383301" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.999951171875" minWidth="10.0" prefWidth="162.999951171875" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="83.39996337890625" minWidth="10.0" prefWidth="21.400048828124994" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="149.60001220703126" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="213.59998168945313" minHeight="31.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="392.80000000000007" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="392.80000000000007" minHeight="31.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="392.80000000000007" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="392.80000000000007" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="392.80000000000007" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="392.80000000000007" minHeight="31.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="392.80000000000007" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="392.80000000000007" minHeight="31.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="392.80000000000007" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="392.80000000000007" minHeight="31.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="392.80000000000007" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="392.80000000000007" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="     Dashboard" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="     Medicines" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="     Suppliers" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: #5eb4ff;" text="       point of sale" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="        Notification" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="     Orders" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                                <ImageView fitHeight="29.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <image>
+                                        <Image url="@../img/v.png" />
+                                    </image>
+                                    <GridPane.margin>
+                                        <Insets left="11.0" />
+                                    </GridPane.margin>
+                                </ImageView>
+                                <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <image>
+                                        <Image url="@../img/bg9.png" />
+                                    </image>
+                                    <GridPane.margin>
+                                        <Insets left="8.0" />
+                                    </GridPane.margin>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                    <image>
+                                        <Image url="@../img/bg10.png" />
+                                    </image>
+                                    <GridPane.margin>
+                                        <Insets left="4.0" top="3.0" />
+                                    </GridPane.margin>
+                                </ImageView>
+                                <ImageView fitHeight="55.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                    <image>
+                                        <Image url="@../img/bg6.png" />
+                                    </image>
+                                    <GridPane.margin>
+                                        <Insets left="8.0" />
+                                    </GridPane.margin>
+                                </ImageView>
+                                <ImageView fitHeight="63.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                    <image>
+                                        <Image url="@../img/857765.png" />
+                                    </image>
+                                    <GridPane.margin>
+                                        <Insets left="11.0" />
+                                    </GridPane.margin>
+                                </ImageView>
+                                <ImageView fitHeight="35.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                                    <image>
+                                        <Image url="@../img/h.png" />
+                                    </image>
+                                    <GridPane.margin>
+                                        <Insets left="8.0" />
+                                    </GridPane.margin>
+                                </ImageView>
+                            </children>
+                        </GridPane>
+                    </center>
+                </BorderPane>
+                <BorderPane prefHeight="166.0" prefWidth="206.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.control.Button?&gt;&lt;Button mnemonicParsing=&quot;false&quot; prefHeight=&quot;100.0&quot; prefWidth=&quot;135.0&quot; text=&quot;Button&quot; xmlns=&quot;http://javafx.com/javafx/23.0.1&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;;">
+                    <bottom>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: #5eb4ff;" text="Logout" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                            <BorderPane.margin>
+                                <Insets bottom="10.0" />
+                            </BorderPane.margin>
+                            <graphic>
+                                <ImageView fitHeight="136.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/jk.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </bottom>
+                </BorderPane>
+            </children>
+        </VBox>
+        <HBox layoutX="206.0" layoutY="85.0" prefHeight="100.0" prefWidth="756.0" AnchorPane.leftAnchor="206.0" AnchorPane.rightAnchor="0.39999999999997726">
+            <children>
+                <BorderPane prefHeight="80.0" prefWidth="1920.0">
+                    <center>
+                        <GridPane prefHeight="100.0" prefWidth="1054.0" BorderPane.alignment="CENTER">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="25.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="165.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="25.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="165.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="25.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="165.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="25.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="165.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="25.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="28.60001220703125" minHeight="10.0" prefHeight="20.599996948242186" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="150.0" minHeight="10.0" prefHeight="59.400000000000006" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="26.599981689453116" minHeight="10.0" prefHeight="19.39999999999999" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button alignment="TOP_LEFT" contentDisplay="CENTER" maxHeight="150.0" maxWidth="200.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="135.0" text="Total Medicines" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                                <Button alignment="TOP_LEFT" contentDisplay="CENTER" maxHeight="150.0" maxWidth="200.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="135.0" text="Low Stock Items" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                                <Button alignment="TOP_LEFT" maxHeight="150.0" maxWidth="200.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="135.0" text="Expiring Soon" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                                <Button alignment="TOP_LEFT" maxHeight="150.0" maxWidth="200.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="135.0" text="Today's Sales" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                                <GridPane GridPane.columnIndex="7" GridPane.rowIndex="1">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="120.199951171875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="76.199951171875" minWidth="10.0" prefWidth="41.800048828125" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <ImageView fitHeight="82.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <image>
+                                                <Image url="@../img/433424.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label text="0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="System Bold" size="35.0" />
+                                            </font>
+                                            <GridPane.margin>
+                                                <Insets left="10.0" top="15.0" />
+                                            </GridPane.margin>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                                <GridPane GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="120.199951171875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="76.199951171875" minWidth="10.0" prefWidth="41.800048828125" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <ImageView fitHeight="104.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <image>
+                                                <Image url="@../img/9210309.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label text="0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="System Bold" size="35.0" />
+                                            </font>
+                                            <GridPane.margin>
+                                                <Insets left="10.0" top="15.0" />
+                                            </GridPane.margin>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                                <GridPane GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="120.199951171875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="76.199951171875" minWidth="10.0" prefWidth="41.800048828125" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <image>
+                                                <Image url="@../img/950808.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label text="0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="System Bold" size="35.0" />
+                                            </font>
+                                            <GridPane.margin>
+                                                <Insets left="10.0" top="15.0" />
+                                            </GridPane.margin>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                                <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="120.199951171875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="76.199951171875" minWidth="10.0" prefWidth="41.800048828125" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <ImageView fitHeight="48.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <image>
+                                                <Image url="@../img/bg1.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label text="0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="System Bold" size="35.0" />
+                                            </font>
+                                            <GridPane.margin>
+                                                <Insets left="10.0" top="15.0" />
+                                            </GridPane.margin>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </GridPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </HBox>
+    </children>
 
 </AnchorPane>
