@@ -399,7 +399,7 @@
                            <center>
                               <ImageView fitHeight="48.0" fitWidth="166.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../img/Screenshot%20(151).png" />
+                                    <Image url="@../img/Screenshot (151).png" />
                                  </image>
                               </ImageView>
                            </center></BorderPane>
@@ -407,7 +407,7 @@
                            <center>
                               <ImageView fitHeight="46.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../img/Screenshot%20(153).png" />
+                                    <Image url="@../img/Screenshot (153).png" />
                                  </image>
                               </ImageView>
                            </center></BorderPane>
@@ -415,7 +415,7 @@
                            <center>
                               <ImageView fitHeight="54.0" fitWidth="166.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@../img/Screenshot%20(150).png" />
+                                    <Image url="@../img/Screenshot (150).png" />
                                  </image>
                               </ImageView>
                            </center>
