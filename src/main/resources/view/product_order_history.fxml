@@ -34,7 +34,7 @@
                                 </ImageView>
                             </top>
                             <center>
-                                <TableView maxWidth="600.0" minHeight="200.0" minWidth="200.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                <TableView fx:id="tblOrderHistoryOverview" maxWidth="600.0" minHeight="200.0" minWidth="200.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                     <BorderPane.margin>
                                         <Insets bottom="10.0" left="40.0" right="40.0" top="30.0" />
                                     </BorderPane.margin>
@@ -65,7 +65,7 @@
                                                         <RowConstraints maxHeight="60.8" minHeight="10.0" prefHeight="60.8" vgrow="SOMETIMES" />
                                                     </rowConstraints>
                                                     <children>
-                                                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="46.0" prefWidth="166.0" text="0.0" GridPane.columnIndex="2">
+                                                        <Label fx:id="idTotalSales" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="46.0" prefWidth="166.0" text="0.0" GridPane.columnIndex="2">
                                                             <font>
                                                                 <Font name="System Bold" size="30.0" />
                                                             </font>
@@ -103,7 +103,7 @@
                         <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Button mnemonicParsing="false" prefHeight="68.0" prefWidth="178.0" style="-fx-background-color: #5eb4ff;" text="Download bill" textFill="WHITE" GridPane.columnIndex="1">
+                        <Button fx:id="btnDownloadList" mnemonicParsing="false" onAction="#btnDownloadListOnAction" prefHeight="68.0" prefWidth="178.0" style="-fx-background-color: #5eb4ff;" text="Download list" textFill="WHITE" GridPane.columnIndex="1">
                             <font>
                                 <Font name="System Bold" size="15.0" />
                             </font>

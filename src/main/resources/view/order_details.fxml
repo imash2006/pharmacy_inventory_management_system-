@@ -39,7 +39,7 @@
                 </ImageView>
                 <BorderPane HBox.hgrow="ALWAYS">
                     <right>
-                        <ImageView fitHeight="53.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_LEFT">
+                        <ImageView fx:id="imgNotificationBell" fitHeight="53.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_LEFT">
                             <image>
                                 <Image url="@../img/857765.png" />
                             </image>
@@ -53,12 +53,12 @@
                             <right>
                                 <VBox prefHeight="83.0" prefWidth="202.0" BorderPane.alignment="CENTER">
                                     <children>
-                                        <Label text="14:30 PM">
+                                        <Label fx:id="idTime" text="14:30 PM">
                                             <font>
                                                 <Font name="Arial Black" size="35.0" />
                                             </font>
                                         </Label>
-                                        <Label text="Jan 21,2026">
+                                        <Label fx:id="idDate" text="Jan 21,2026">
                                             <font>
                                                 <Font name="Arial Black" size="20.0" />
                                             </font>
@@ -101,32 +101,32 @@
                                 <RowConstraints maxHeight="392.80000000000007" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="     Dashboard" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <Button fx:id="btnDashboard" mnemonicParsing="false" onAction="#btnDashboardOnAction" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="     Dashboard" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                     <font>
                                         <Font name="System Bold" size="15.0" />
                                     </font>
                                 </Button>
-                                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="     Medicines" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                <Button fx:id="btnNotifications" mnemonicParsing="false" onAction="#btnNotificationsOnAction" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="     Medicines" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                     <font>
                                         <Font name="System Bold" size="15.0" />
                                     </font>
                                 </Button>
-                                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="     Suppliers" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                <Button fx:id="btnSuppliers" mnemonicParsing="false" onAction="#btnSuppliersOnAction" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="     Suppliers" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                     <font>
                                         <Font name="System Bold" size="15.0" />
                                     </font>
                                 </Button>
-                                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="       point of sale" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                <Button fx:id="btnPointOfSale" mnemonicParsing="false" onAction="#btnPointOfSaleOnAction" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="       point of sale" GridPane.columnIndex="1" GridPane.rowIndex="7">
                                     <font>
                                         <Font name="System Bold" size="15.0" />
                                     </font>
                                 </Button>
-                                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="        Notification" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                <Button fx:id="btnNotification" mnemonicParsing="false" onAction="#btnNotificationOnAction" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="        Notification" GridPane.columnIndex="1" GridPane.rowIndex="9">
                                     <font>
                                         <Font name="System Bold" size="15.0" />
                                     </font>
                                 </Button>
-                                <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: #5eb4ff;" text="      Orders" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                                <Button fx:id="btnOrders" mnemonicParsing="false" onAction="#btnOrdersOnAction" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: #5eb4ff;" text="      Orders" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="11">
                                     <font>
                                         <Font name="System Bold" size="15.0" />
                                     </font>
@@ -185,7 +185,7 @@
                 </BorderPane>
                 <BorderPane prefHeight="166.0" prefWidth="206.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.control.Button?&gt;&lt;Button mnemonicParsing=&quot;false&quot; prefHeight=&quot;100.0&quot; prefWidth=&quot;135.0&quot; text=&quot;Button&quot; xmlns=&quot;http://javafx.com/javafx/23.0.1&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;;">
                     <bottom>
-                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: #5eb4ff;" text="Logout" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
+                        <Button fx:id="btnLogout" alignment="CENTER" mnemonicParsing="false" onAction="#btnLogoutOnAction" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: #5eb4ff;" text="Logout" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
                             <font>
                                 <Font name="System Bold" size="15.0" />
                             </font>
@@ -262,7 +262,7 @@
                                                 <Image url="@../img/433424.png" />
                                             </image>
                                         </ImageView>
-                                        <Label text="0" GridPane.rowIndex="1">
+                                        <Label fx:id="idTodaysSales" text="0" GridPane.rowIndex="1">
                                             <font>
                                                 <Font name="System Bold" size="35.0" />
                                             </font>
@@ -288,7 +288,7 @@
                                                 <Image url="@../img/9210309.png" />
                                             </image>
                                         </ImageView>
-                                        <Label text="0" GridPane.rowIndex="1">
+                                        <Label fx:id="idExpiringSoon" text="0" GridPane.rowIndex="1">
                                             <font>
                                                 <Font name="System Bold" size="35.0" />
                                             </font>
@@ -314,7 +314,7 @@
                                                 <Image url="@../img/950808.png" />
                                             </image>
                                         </ImageView>
-                                        <Label text="0" GridPane.rowIndex="1">
+                                        <Label fx:id="idLowStockItems" text="0" GridPane.rowIndex="1">
                                             <font>
                                                 <Font name="System Bold" size="35.0" />
                                             </font>
@@ -340,7 +340,7 @@
                                                 <Image url="@../img/bg1.png" />
                                             </image>
                                         </ImageView>
-                                        <Label text="0" GridPane.rowIndex="1">
+                                        <Label fx:id="idTotalMedicines" text="0" GridPane.rowIndex="1">
                                             <font>
                                                 <Font name="System Bold" size="35.0" />
                                             </font>
@@ -373,7 +373,7 @@
             <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <TableView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <TableView fx:id="tblOrderHistoryOverview" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <columns>
                         <TableColumn maxWidth="1.7976931348623157E308" text="Order ID" />
                         <TableColumn maxWidth="1.7976931348623157E308" text="Order date" />
@@ -436,8 +436,8 @@
                                         <Font name="System Bold" size="12.0" />
                                     </font>
                                 </Label>
-                                <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="71.0" style="-fx-background-color: #5eb4ff;" text="Delete" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="11">
+                                <TextField fx:id="txtOrderI" onAction="#txtOrderIdOnAction" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                <Button fx:id="btndelete" mnemonicParsing="false" onAction="#btndeleteOnAction" prefHeight="26.0" prefWidth="71.0" style="-fx-background-color: #5eb4ff;" text="Delete" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="11">
                                     <GridPane.margin>
                                         <Insets left="50.0" />
                                     </GridPane.margin>
@@ -445,22 +445,22 @@
                                         <Font name="System Bold" size="12.0" />
                                     </font>
                                 </Button>
-                        <Label text="Date" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                        <Label fx:id="idOrderDate" text="Date" GridPane.columnIndex="3" GridPane.rowIndex="3">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label text="Name" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                        <Label fx:id="idOrderName" text="Name" GridPane.columnIndex="3" GridPane.rowIndex="5">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label text="Quantity" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                        <Label fx:id="idOrderQuantity" text="Quantity" GridPane.columnIndex="3" GridPane.rowIndex="7">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label text="Price" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                        <Label fx:id="idOrderPrice" text="Price" GridPane.columnIndex="3" GridPane.rowIndex="9">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -495,7 +495,7 @@
                 </BorderPane>
             <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <right>
-                  <Button mnemonicParsing="false" style="-fx-background-color: #5eb4ff;" text="Get copy" textFill="WHITE" BorderPane.alignment="CENTER">
+                  <Button fx:id="btnGetCopy" mnemonicParsing="false" onAction="#btnGetCopyOnAction" style="-fx-background-color: #5eb4ff;" text="Get copy" textFill="WHITE" BorderPane.alignment="CENTER">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
