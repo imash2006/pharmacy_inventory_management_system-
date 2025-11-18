@@ -29,12 +29,12 @@
          <center>
             <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
                <children>
-                  <Label layoutX="126.0" text="Login Form" textFill="WHITE">
+                  <Label layoutX="126.0" layoutY="-5.0" text="Login Form" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="32.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtusername" layoutX="166.0" layoutY="108.0" prefHeight="26.0" prefWidth="262.0" />
+                  <TextField fx:id="txtusername" layoutX="166.0" layoutY="108.0" onAction="#setOnAction" prefHeight="26.0" prefWidth="262.0" />
                   <PasswordField fx:id="txtpassword" layoutX="166.0" layoutY="187.0" prefHeight="26.0" prefWidth="262.0" />
                   <Label layoutY="108.0" text="Username" textFill="WHITE">
                      <font>

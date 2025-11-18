@@ -2,10 +2,16 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class DashboardController {
 
@@ -63,6 +69,7 @@ public class DashboardController {
     @FXML
     private TableView<?> tblInventoryOverview;
 
+    Stage stage = new Stage();
     @FXML
     void btnDashboardOnAction(ActionEvent event) {
 
@@ -70,7 +77,15 @@ public class DashboardController {
 
     @FXML
     void btnLogoutOnAction(ActionEvent event) {
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/login_form.fxml"))));
 
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            currentStage.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
     }
 
     @FXML

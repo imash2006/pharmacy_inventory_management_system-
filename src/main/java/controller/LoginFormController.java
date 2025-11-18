@@ -3,6 +3,7 @@ package controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -35,6 +36,10 @@ public class LoginFormController {
             if (input2.equals(password)){
                 try {
                     stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/dashboard.fxml"))));
+
+                    Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                    currentStage.close();
+
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
@@ -53,5 +58,10 @@ public class LoginFormController {
             }
         }
         stage.show();
+    }
+
+    public void setOnAction(ActionEvent actionEvent) {
+        txtusername.setOnAction(e -> txtpassword.requestFocus());
+        txtpassword.setOnAction(e -> btnlogin.requestFocus());
     }
 }
