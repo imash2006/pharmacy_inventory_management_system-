@@ -21,7 +21,7 @@
    <children>
       <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView pickOnBounds="true" preserveRatio="true">
+            <ImageView opacity="0.59" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/j.jpeg" />
                </image>
@@ -54,7 +54,7 @@
                 <RowConstraints maxHeight="15.599996948242186" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="278.0" style="-fx-background-color: #5eb4ff;" text="Filter" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Button fx:id="btnFilter" mnemonicParsing="false" onAction="#btnFilterOnAction" prefHeight="49.0" prefWidth="278.0" style="-fx-background-color: #5eb4ff;" text="Filter" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
@@ -64,19 +64,19 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TextField GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtMedicineFilter" GridPane.columnIndex="5" GridPane.rowIndex="1" />
                   <Label prefHeight="46.0" prefWidth="146.0" text="Cateogry" GridPane.columnIndex="7" GridPane.rowIndex="1">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <ComboBox prefWidth="150.0" style="-fx-background-color: white;" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="comCategoryFilter" prefWidth="150.0" style="-fx-background-color: white;" GridPane.columnIndex="9" GridPane.rowIndex="1" />
                   <Label prefHeight="130.0" prefWidth="193.0" text="Name" GridPane.columnIndex="11" GridPane.rowIndex="1">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TextField GridPane.columnIndex="13" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtNameFilter" GridPane.columnIndex="13" GridPane.rowIndex="1" />
                </children>
                <BorderPane.margin>
                   <Insets top="20.0" />
@@ -84,7 +84,7 @@
             </GridPane>
          </top>
          <center>
-            <TableView maxHeight="800.0" maxWidth="800.0" minHeight="200.0" minWidth="150.0" prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+            <TableView fx:id="tblMedicineInventory" maxHeight="800.0" maxWidth="800.0" minHeight="200.0" minWidth="150.0" prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="CENTER">
               <columns>
                 <TableColumn prefWidth="133.34" text="Medicine ID" />
                 <TableColumn prefWidth="133.34" text="Category" />
