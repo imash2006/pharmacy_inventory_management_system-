@@ -2,6 +2,9 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
@@ -9,6 +12,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class CashierDashboardController {
 
@@ -100,7 +106,19 @@ public class CashierDashboardController {
 
     @FXML
     void btnDashboardOnAction(ActionEvent event) {
+        idMainPane.getChildren().clear();
 
+        AnchorPane newPane = null;
+        try {
+            newPane = FXMLLoader.load(getClass().getResource("/view/dashboard.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        AnchorPane.setTopAnchor(newPane, 0.0);
+        AnchorPane.setBottomAnchor(newPane, 0.0);
+        AnchorPane.setLeftAnchor(newPane, 0.0);
+        AnchorPane.setRightAnchor(newPane, 0.0);
+        idMainPane2.getChildren().setAll(newPane);
     }
 
     @FXML
@@ -110,17 +128,53 @@ public class CashierDashboardController {
 
     @FXML
     void btnMedicineOnAction(ActionEvent event) {
+        idMainPane.getChildren().clear();
 
+        AnchorPane newPane = null;
+        try {
+            newPane = FXMLLoader.load(getClass().getResource("/view/medicine_inventory.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        AnchorPane.setTopAnchor(newPane, 0.0);
+        AnchorPane.setBottomAnchor(newPane, 0.0);
+        AnchorPane.setLeftAnchor(newPane, 0.0);
+        AnchorPane.setRightAnchor(newPane, 0.0);
+        idMainPane2.getChildren().setAll(newPane);
     }
 
     @FXML
     void btnNotificationOnAction(ActionEvent event) {
+        idMainPane.getChildren().clear();
 
+        AnchorPane newPane = null;
+        try {
+            newPane = FXMLLoader.load(getClass().getResource("/view/notification_overview.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        AnchorPane.setTopAnchor(newPane, 0.0);
+        AnchorPane.setBottomAnchor(newPane, 0.0);
+        AnchorPane.setLeftAnchor(newPane, 0.0);
+        AnchorPane.setRightAnchor(newPane, 0.0);
+        idMainPane2.getChildren().setAll(newPane);
     }
 
     @FXML
     void btnOrderOnAction(ActionEvent event) {
+        idMainPane.getChildren().clear();
 
+        AnchorPane newPane = null;
+        try {
+            newPane = FXMLLoader.load(getClass().getResource("/view/order_details.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        AnchorPane.setTopAnchor(newPane, 0.0);
+        AnchorPane.setBottomAnchor(newPane, 0.0);
+        AnchorPane.setLeftAnchor(newPane, 0.0);
+        AnchorPane.setRightAnchor(newPane, 0.0);
+        idMainPane2.getChildren().setAll(newPane);
     }
 
     @FXML
@@ -130,22 +184,60 @@ public class CashierDashboardController {
 
     @FXML
     void btnPointOfSaleOnAction(ActionEvent event) {
+        idMainPane.getChildren().clear();
 
+        AnchorPane newPane = null;
+        try {
+            newPane = FXMLLoader.load(getClass().getResource("/view/cashier_dashboard.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        AnchorPane.setTopAnchor(newPane, 0.0);
+        AnchorPane.setBottomAnchor(newPane, 0.0);
+        AnchorPane.setLeftAnchor(newPane, 0.0);
+        AnchorPane.setRightAnchor(newPane, 0.0);
+        idMainPane2.getChildren().setAll(newPane);
     }
 
     @FXML
     void btnSupplierOnAction(ActionEvent event) {
+        idMainPane.getChildren().clear();
 
+        AnchorPane newPane = null;
+        try {
+            newPane = FXMLLoader.load(getClass().getResource("/view/supplier_overview.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        AnchorPane.setTopAnchor(newPane, 0.0);
+        AnchorPane.setBottomAnchor(newPane, 0.0);
+        AnchorPane.setLeftAnchor(newPane, 0.0);
+        AnchorPane.setRightAnchor(newPane, 0.0);
+        idMainPane2.getChildren().setAll(newPane);
     }
 
     @FXML
     void btnViewItemTableOnAction(ActionEvent event) {
-
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/item_tabl_view.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
     }
 
+    Stage stage = new Stage();
     @FXML
     void btnlogoutOnAction(ActionEvent event) {
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/login_form.fxml"))));
 
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            currentStage.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
     }
 
     @FXML
