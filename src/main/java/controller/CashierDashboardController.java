@@ -8,8 +8,15 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 
 public class CashierDashboardController {
+
+    @FXML
+    public AnchorPane idMainPane2;
+
+    @FXML
+    public AnchorPane idMainPane;
 
     @FXML
     private Button btnAddToCart;

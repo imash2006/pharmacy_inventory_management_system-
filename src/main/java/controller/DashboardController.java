@@ -9,11 +9,22 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class DashboardController {
+
+    @FXML
+    public GridPane idDashboardGridPane;
+
+    @FXML
+    public AnchorPane idMainPane;
+
+    @FXML
+    public AnchorPane idMainPane2;
 
     @FXML
     private Button btnDashboard;
@@ -90,27 +101,88 @@ public class DashboardController {
 
     @FXML
     void btnMedicinesOnAction(ActionEvent event) {
+        idMainPane.getChildren().clear();
+
+        AnchorPane newPane = null;
+        try {
+            newPane = FXMLLoader.load(getClass().getResource("/view/medicine_inventory.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        AnchorPane.setTopAnchor(newPane, 0.0);
+        AnchorPane.setBottomAnchor(newPane, 0.0);
+        AnchorPane.setLeftAnchor(newPane, 0.0);
+        AnchorPane.setRightAnchor(newPane, 0.0);
+        idMainPane2.getChildren().setAll(newPane);
 
     }
 
     @FXML
     void btnNotificationOnAction(ActionEvent event) {
+        idMainPane.getChildren().clear();
 
+        AnchorPane newPane = null;
+        try {
+            newPane = FXMLLoader.load(getClass().getResource("/view/notification_overview.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        AnchorPane.setTopAnchor(newPane, 0.0);
+        AnchorPane.setBottomAnchor(newPane, 0.0);
+        AnchorPane.setLeftAnchor(newPane, 0.0);
+        AnchorPane.setRightAnchor(newPane, 0.0);
+        idMainPane2.getChildren().setAll(newPane);
     }
 
     @FXML
     void btnOrdersOnAction(ActionEvent event) {
+        idMainPane.getChildren().clear();
 
+        AnchorPane newPane = null;
+        try {
+            newPane = FXMLLoader.load(getClass().getResource("/view/order_details.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        AnchorPane.setTopAnchor(newPane, 0.0);
+        AnchorPane.setBottomAnchor(newPane, 0.0);
+        AnchorPane.setLeftAnchor(newPane, 0.0);
+        AnchorPane.setRightAnchor(newPane, 0.0);
+        idMainPane2.getChildren().setAll(newPane);
     }
 
     @FXML
     void btnPointOfSaleOnAction(ActionEvent event) {
+        idMainPane.getChildren().clear();
 
+        AnchorPane newPane = null;
+        try {
+            newPane = FXMLLoader.load(getClass().getResource("/view/cashier_dashboard.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        AnchorPane.setTopAnchor(newPane, 0.0);
+        AnchorPane.setBottomAnchor(newPane, 0.0);
+        AnchorPane.setLeftAnchor(newPane, 0.0);
+        AnchorPane.setRightAnchor(newPane, 0.0);
+        idMainPane2.getChildren().setAll(newPane);
     }
 
     @FXML
     void btnSupplierOnAction(ActionEvent event) {
+        idMainPane.getChildren().clear();
 
+        AnchorPane newPane = null;
+        try {
+            newPane = FXMLLoader.load(getClass().getResource("/view/supplier_overview.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        AnchorPane.setTopAnchor(newPane, 0.0);
+        AnchorPane.setBottomAnchor(newPane, 0.0);
+        AnchorPane.setLeftAnchor(newPane, 0.0);
+        AnchorPane.setRightAnchor(newPane, 0.0);
+        idMainPane2.getChildren().setAll(newPane);
     }
 
 }

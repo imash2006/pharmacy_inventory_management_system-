@@ -7,8 +7,15 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 public class NotificationOverviewController {
+
+    @FXML
+    public AnchorPane idMainPane2;
+
+    @FXML
+    public AnchorPane idMainPane;
 
     @FXML
     private Button PointOfSale;
