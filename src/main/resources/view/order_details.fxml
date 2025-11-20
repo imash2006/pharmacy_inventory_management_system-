@@ -109,7 +109,7 @@
                                               <Font name="System Bold" size="15.0" />
                                           </font>
                                       </Button>
-                                      <Button fx:id="btnNotifications" mnemonicParsing="false" onAction="#btnNotificationsOnAction" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="     Medicines" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                      <Button fx:id="btnNotifications" mnemonicParsing="false" onAction="#btnNotificationOnAction" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="     Medicines" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                           <font>
                                               <Font name="System Bold" size="15.0" />
                                           </font>
