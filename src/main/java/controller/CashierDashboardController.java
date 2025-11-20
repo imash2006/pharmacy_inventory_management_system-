@@ -179,7 +179,12 @@ public class CashierDashboardController {
 
     @FXML
     void btnPlaceOrderOnAction(ActionEvent event) {
-
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/place_order.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
     }
 
     @FXML
