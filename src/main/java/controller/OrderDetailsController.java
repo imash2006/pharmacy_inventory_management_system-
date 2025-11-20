@@ -130,23 +130,6 @@ public class OrderDetailsController {
     }
 
     @FXML
-    void btnNotificationOnAction(ActionEvent event) {
-        idMainPane.getChildren().clear();
-
-        AnchorPane newPane = null;
-        try {
-            newPane = FXMLLoader.load(getClass().getResource("/view/notification_overview.fxml"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        AnchorPane.setTopAnchor(newPane, 0.0);
-        AnchorPane.setBottomAnchor(newPane, 0.0);
-        AnchorPane.setLeftAnchor(newPane, 0.0);
-        AnchorPane.setRightAnchor(newPane, 0.0);
-        idMainPane2.getChildren().setAll(newPane);
-    }
-
-    @FXML
     void btnOrdersOnAction(ActionEvent event) {
         idMainPane.getChildren().clear();
 
@@ -208,4 +191,37 @@ public class OrderDetailsController {
 
     }
 
+    @FXML
+    public void btnMedicinesOnAction(ActionEvent actionEvent) {
+        idMainPane.getChildren().clear();
+
+        AnchorPane newPane = null;
+        try {
+            newPane = FXMLLoader.load(getClass().getResource("/view/medicine_inventory.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        AnchorPane.setTopAnchor(newPane, 0.0);
+        AnchorPane.setBottomAnchor(newPane, 0.0);
+        AnchorPane.setLeftAnchor(newPane, 0.0);
+        AnchorPane.setRightAnchor(newPane, 0.0);
+        idMainPane2.getChildren().setAll(newPane);
+    }
+
+    @FXML
+    public void btnNotificationsOnAction(ActionEvent actionEvent) {
+        idMainPane.getChildren().clear();
+
+        AnchorPane newPane = null;
+        try {
+            newPane = FXMLLoader.load(getClass().getResource("/view/notification_overview.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        AnchorPane.setTopAnchor(newPane, 0.0);
+        AnchorPane.setBottomAnchor(newPane, 0.0);
+        AnchorPane.setLeftAnchor(newPane, 0.0);
+        AnchorPane.setRightAnchor(newPane, 0.0);
+        idMainPane2.getChildren().setAll(newPane);
+    }
 }

@@ -17,7 +17,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="idMainPane2" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderDetailsController">
    <children>
       <AnchorPane fx:id="idMainPane" maxHeight="540.0" maxWidth="960.0" minHeight="540.0" minWidth="960.0" prefHeight="540.0" prefWidth="960.0">
@@ -109,7 +108,7 @@
                                               <Font name="System Bold" size="15.0" />
                                           </font>
                                       </Button>
-                                      <Button fx:id="btnNotifications" mnemonicParsing="false" onAction="#btnNotificationOnAction" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="     Medicines" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                      <Button fx:id="btnMedicines" mnemonicParsing="false" onAction="#btnMedicinesOnAction" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="     Medicines" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                           <font>
                                               <Font name="System Bold" size="15.0" />
                                           </font>
@@ -124,7 +123,7 @@
                                               <Font name="System Bold" size="15.0" />
                                           </font>
                                       </Button>
-                                      <Button fx:id="btnNotification" mnemonicParsing="false" onAction="#btnNotificationOnAction" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="        Notification" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                      <Button fx:id="btnNotifications" mnemonicParsing="false" onAction="#btnNotificationsOnAction" prefHeight="46.0" prefWidth="186.0" style="-fx-background-color: white; -fx-border-color: #818181;" text="        Notification" GridPane.columnIndex="1" GridPane.rowIndex="9">
                                           <font>
                                               <Font name="System Bold" size="15.0" />
                                           </font>
