@@ -371,12 +371,12 @@
                <children>
                   <TableView fx:id="tblInventoryOverview" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <columns>
-                      <TableColumn maxWidth="1.7976931348623157E308" text="Medicine ID" />
-                        <TableColumn maxWidth="1.7976931348623157E308" text="Category" />
-                        <TableColumn maxWidth="1.7976931348623157E308" text="Name" />
-                        <TableColumn maxWidth="1.7976931348623157E308" text="Expiry date" />
-                        <TableColumn maxWidth="1.7976931348623157E308" text="Quantity" />
-                        <TableColumn maxWidth="1.7976931348623157E308" text="Price" />
+                      <TableColumn fx:id="dashboardid" maxWidth="1.7976931348623157E308" text="Medicine ID" />
+                        <TableColumn fx:id="dashboardcategory" maxWidth="1.7976931348623157E308" text="Category" />
+                        <TableColumn fx:id="dashboardname" maxWidth="1.7976931348623157E308" text="Name" />
+                        <TableColumn fx:id="dashboardexpirydate" maxWidth="1.7976931348623157E308" text="Expiry date" />
+                        <TableColumn fx:id="dashboardquantity" maxWidth="1.7976931348623157E308" text="Quantity" />
+                        <TableColumn fx:id="dashboardprice" maxWidth="1.7976931348623157E308" text="Price" />
                     </columns>
                      <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

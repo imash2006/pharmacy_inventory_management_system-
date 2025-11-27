@@ -1,5 +1,7 @@
 package controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,15 +9,22 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import model.dto.Dashboard;
 
 import java.io.IOException;
 
 public class DashboardController {
+
+    ObservableList<Dashboard>dashboards = FXCollections.observableArrayList(
+            new Dashboard("M0001", "vitamin", "vitemin c","2025-02-06", "50", 30.0)
+    );
 
     @FXML
     public GridPane idDashboardGridPane;
@@ -25,6 +34,24 @@ public class DashboardController {
 
     @FXML
     public AnchorPane idMainPane2;
+
+    @FXML
+    public TableColumn dashboardid;
+
+    @FXML
+    public TableColumn dashboardcategory;
+
+    @FXML
+    public TableColumn dashboardname;
+
+    @FXML
+    public TableColumn dashboardexpirydate;
+
+    @FXML
+    public TableColumn dashboardquantity;
+
+    @FXML
+    public TableColumn dashboardprice;
 
     @FXML
     private Button btnDashboard;
@@ -78,12 +105,19 @@ public class DashboardController {
     private Label idTotalMedicines;
 
     @FXML
-    private TableView<?> tblInventoryOverview;
+    private TableView<Dashboard> tblInventoryOverview;
 
     Stage stage = new Stage();
     @FXML
     void btnDashboardOnAction(ActionEvent event) {
+        dashboardid.setCellValueFactory(new PropertyValueFactory<>("medicineid"));
+        dashboardcategory.setCellValueFactory(new PropertyValueFactory<>("medicinecategory"));
+        dashboardname.setCellValueFactory(new PropertyValueFactory<>("medicinename"));
+        dashboardexpirydate.setCellValueFactory(new PropertyValueFactory<>("medicineexpirydate"));
+        dashboardquantity.setCellValueFactory(new PropertyValueFactory<>("medicinequantity"));
+        dashboardprice.setCellValueFactory(new PropertyValueFactory<>("medicineprice"));
 
+        tblInventoryOverview.setItems(dashboards);
     }
 
     @FXML
