@@ -24,6 +24,9 @@ public class OrderDetailsController {
     public AnchorPane idMainPane;
 
     @FXML
+    public Button btnMedicines;
+
+    @FXML
     private Button btnDashboard;
 
     @FXML

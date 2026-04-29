@@ -379,7 +379,7 @@
                           <columns>
                               <TableColumn maxWidth="1.7976931348623157E308" text="Order ID" />
                               <TableColumn maxWidth="1.7976931348623157E308" text="Order date" />
-                              <TableColumn maxWidth="1.7976931348623157E308" text="Order item" />
+                              <TableColumn maxWidth="1.7976931348623157E308" text="Order items" />
                               <TableColumn maxWidth="1.7976931348623157E308" text="Quantity" />
                               <TableColumn maxWidth="1.7976931348623157E308" text="Price(Rs.)" />
                           </columns>

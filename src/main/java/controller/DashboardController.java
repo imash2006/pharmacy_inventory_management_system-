@@ -19,11 +19,11 @@ import javafx.stage.Stage;
 import model.dto.Dashboard;
 
 import java.io.IOException;
+import java.sql.*;
 
 public class DashboardController {
-
     ObservableList<Dashboard>dashboards = FXCollections.observableArrayList(
-            new Dashboard("M0001", "vitamin", "vitemin c","2025-02-06", "50", 30.0)
+
     );
 
     @FXML
@@ -110,6 +110,18 @@ public class DashboardController {
     Stage stage = new Stage();
     @FXML
     void btnDashboardOnAction(ActionEvent event) {
+
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/healthy_life_pharmacy","root","1234");
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT*FROM inventory_overview");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
         dashboardid.setCellValueFactory(new PropertyValueFactory<>("medicineid"));
         dashboardcategory.setCellValueFactory(new PropertyValueFactory<>("medicinecategory"));
         dashboardname.setCellValueFactory(new PropertyValueFactory<>("medicinename"));
