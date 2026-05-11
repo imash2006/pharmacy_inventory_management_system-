@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -19,9 +20,11 @@ import javafx.stage.Stage;
 import model.dto.Dashboard;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.*;
+import java.util.ResourceBundle;
 
-public class DashboardController {
+public class DashboardController implements Initializable {
     ObservableList<Dashboard>dashboards = FXCollections.observableArrayList(
 
     );
@@ -112,12 +115,23 @@ public class DashboardController {
     void btnDashboardOnAction(ActionEvent event) {
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/healthy_life_pharmacy","root","1234");
-            PreparedStatement preparedStatement = connection.prepareStatement("SELECT*FROM inventory_overview");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ healthy_life_pharmacy","root","1234");
+            String SQL = "select*from inventory_overview";
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             ResultSet resultSet = preparedStatement.executeQuery();
+
             while (resultSet.next()){
-                
+                Dashboard dashboard = new Dashboard(
+                        resultSet.getString("MedicineID"),
+                        resultSet.getString("Category"),
+                        resultSet.getString("Name"),
+                        resultSet.getString("Expiry_date"),
+                        resultSet.getString("Quantity"),
+                        resultSet.getString("Price")
+                );
+                dashboards.add(dashboard);
             }
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -231,4 +245,8 @@ public class DashboardController {
         idMainPane2.getChildren().setAll(newPane);
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }

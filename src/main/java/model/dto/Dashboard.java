@@ -13,5 +13,5 @@ public class Dashboard {
     private String medicinename;
     private String medicineexpirydate;
     private String medicinequantity;
-    private Double medicineprice;
+    private String medicineprice;
 }
