@@ -120,6 +120,8 @@ public class DashboardController implements Initializable {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             ResultSet resultSet = preparedStatement.executeQuery();
 
+            dashboards.clear();
+
             while (resultSet.next()){
                 Dashboard dashboard = new Dashboard(
                         resultSet.getString("MedicineID"),
@@ -247,6 +249,35 @@ public class DashboardController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ healthy_life_pharmacy","root","1234");
+            String SQL = "select*from inventory_overview";
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            ResultSet resultSet = preparedStatement.executeQuery();
 
+            while (resultSet.next()){
+                Dashboard dashboard = new Dashboard(
+                        resultSet.getString("MedicineID"),
+                        resultSet.getString("Category"),
+                        resultSet.getString("Name"),
+                        resultSet.getString("Expiry_date"),
+                        resultSet.getString("Quantity"),
+                        resultSet.getString("Price")
+                );
+                dashboards.add(dashboard);
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        dashboardid.setCellValueFactory(new PropertyValueFactory<>("medicineid"));
+        dashboardcategory.setCellValueFactory(new PropertyValueFactory<>("medicinecategory"));
+        dashboardname.setCellValueFactory(new PropertyValueFactory<>("medicinename"));
+        dashboardexpirydate.setCellValueFactory(new PropertyValueFactory<>("medicineexpirydate"));
+        dashboardquantity.setCellValueFactory(new PropertyValueFactory<>("medicinequantity"));
+        dashboardprice.setCellValueFactory(new PropertyValueFactory<>("medicineprice"));
+
+        tblInventoryOverview.setItems(dashboards);
     }
 }
