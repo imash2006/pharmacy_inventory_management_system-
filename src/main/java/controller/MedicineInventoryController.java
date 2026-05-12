@@ -1,22 +1,31 @@
 package controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import model.dto.Dashboard;
+import model.dto.MedicineInventory;
 
 import java.io.IOException;
+import java.net.URL;
+import java.sql.*;
+import java.util.ResourceBundle;
 
-public class MedicineInventoryController {
+public class MedicineInventoryController implements Initializable {
+
+    ObservableList<MedicineInventory> inventory = FXCollections.observableArrayList(
+
+    );
 
     @FXML
     public AnchorPane idMainPane;
@@ -79,7 +88,25 @@ public class MedicineInventoryController {
     private Label idTotalMedicines;
 
     @FXML
-    private TableView<?> tblInventiryOverview;
+    private TableView<MedicineInventory> tblInventiryOverview;
+
+    @FXML
+    public TableColumn medicineid;
+
+    @FXML
+    public TableColumn medicinecategory;
+
+    @FXML
+    public TableColumn medicinename;
+
+    @FXML
+    public TableColumn medicineexpirydate;
+
+    @FXML
+    public TableColumn medicinequantity;
+
+    @FXML
+    public TableColumn medicineprice;
 
     @FXML
     private TextField txtCategory;
@@ -150,19 +177,38 @@ public class MedicineInventoryController {
 
     @FXML
     void btnMedicineOnAction(ActionEvent event) {
-        idMainPane.getChildren().clear();
 
-        AnchorPane newPane = null;
         try {
-            newPane = FXMLLoader.load(getClass().getResource("/view/medicine_inventory.fxml"));
-        } catch (IOException e) {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/healthy_life_pharmacy","root","1234");
+            String SQL = "select*from inventory_overview";
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            inventory.clear();
+
+            while (resultSet.next()){
+                MedicineInventory medicine = new MedicineInventory(
+                        resultSet.getString("MedicineID"),
+                        resultSet.getString("Category"),
+                        resultSet.getString("Name"),
+                        resultSet.getString("Expiry_date"),
+                        resultSet.getString("Quantity"),
+                        resultSet.getString("Price")
+                );
+                inventory.add(medicine);
+            }
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        AnchorPane.setTopAnchor(newPane, 0.0);
-        AnchorPane.setBottomAnchor(newPane, 0.0);
-        AnchorPane.setLeftAnchor(newPane, 0.0);
-        AnchorPane.setRightAnchor(newPane, 0.0);
-        idMainPane2.getChildren().setAll(newPane);
+        medicineid.setCellValueFactory(new PropertyValueFactory<>("medicineid"));
+        medicinecategory.setCellValueFactory(new PropertyValueFactory<>("medicinecategory"));
+        medicinename.setCellValueFactory(new PropertyValueFactory<>("medicinename"));
+        medicineexpirydate.setCellValueFactory(new PropertyValueFactory<>("medicineexpirydate"));
+        medicinequantity.setCellValueFactory(new PropertyValueFactory<>("medicinequantity"));
+        medicineprice.setCellValueFactory(new PropertyValueFactory<>("medicineprice"));
+
+        tblInventiryOverview.setItems(inventory);
+
     }
 
     @FXML
@@ -233,4 +279,37 @@ public class MedicineInventoryController {
         idMainPane2.getChildren().setAll(newPane);
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/healthy_life_pharmacy","root","1234");
+            String SQL = "select*from inventory_overview";
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            inventory.clear();
+
+            while (resultSet.next()){
+                MedicineInventory medicine = new MedicineInventory(
+                        resultSet.getString("MedicineID"),
+                        resultSet.getString("Category"),
+                        resultSet.getString("Name"),
+                        resultSet.getString("Expiry_date"),
+                        resultSet.getString("Quantity"),
+                        resultSet.getString("Price")
+                );
+                inventory.add(medicine);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        medicineid.setCellValueFactory(new PropertyValueFactory<>("medicineid"));
+        medicinecategory.setCellValueFactory(new PropertyValueFactory<>("medicinecategory"));
+        medicinename.setCellValueFactory(new PropertyValueFactory<>("medicinename"));
+        medicineexpirydate.setCellValueFactory(new PropertyValueFactory<>("medicineexpirydate"));
+        medicinequantity.setCellValueFactory(new PropertyValueFactory<>("medicinequantity"));
+        medicineprice.setCellValueFactory(new PropertyValueFactory<>("medicineprice"));
+
+        tblInventiryOverview.setItems(inventory);
+    }
 }

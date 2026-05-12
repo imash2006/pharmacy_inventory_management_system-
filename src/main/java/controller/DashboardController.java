@@ -25,7 +25,7 @@ import java.sql.*;
 import java.util.ResourceBundle;
 
 public class DashboardController implements Initializable {
-    ObservableList<Dashboard>dashboards = FXCollections.observableArrayList(
+    ObservableList<Dashboard>inventory = FXCollections.observableArrayList(
 
     );
 
@@ -120,7 +120,7 @@ public class DashboardController implements Initializable {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            dashboards.clear();
+            inventory.clear();
 
             while (resultSet.next()){
                 Dashboard dashboard = new Dashboard(
@@ -131,7 +131,7 @@ public class DashboardController implements Initializable {
                         resultSet.getString("Quantity"),
                         resultSet.getString("Price")
                 );
-                dashboards.add(dashboard);
+                inventory.add(dashboard);
             }
 
         } catch (SQLException e) {
@@ -145,7 +145,7 @@ public class DashboardController implements Initializable {
         dashboardquantity.setCellValueFactory(new PropertyValueFactory<>("medicinequantity"));
         dashboardprice.setCellValueFactory(new PropertyValueFactory<>("medicineprice"));
 
-        tblInventoryOverview.setItems(dashboards);
+        tblInventoryOverview.setItems(inventory);
     }
 
     @FXML
@@ -264,7 +264,7 @@ public class DashboardController implements Initializable {
                         resultSet.getString("Quantity"),
                         resultSet.getString("Price")
                 );
-                dashboards.add(dashboard);
+                inventory.add(dashboard);
             }
 
         } catch (SQLException e) {
@@ -278,6 +278,6 @@ public class DashboardController implements Initializable {
         dashboardquantity.setCellValueFactory(new PropertyValueFactory<>("medicinequantity"));
         dashboardprice.setCellValueFactory(new PropertyValueFactory<>("medicineprice"));
 
-        tblInventoryOverview.setItems(dashboards);
+        tblInventoryOverview.setItems(inventory);
     }
 }
